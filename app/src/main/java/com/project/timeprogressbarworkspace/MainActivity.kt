@@ -22,15 +22,11 @@ class MainActivity : AppCompatActivity() {
         mProgressBar.progress = progress
         mCountDownTimer = object : CountDownTimer(10800, 25) {
             override fun onTick(millisUntilFinished: Long) {
-                //Log.v("Log_tag", "Tick of Progress$i$millisUntilFinished")
                 progress++
-                mProgressBar.progress = progress // as Int * 100 / (5000 / 50)
+                mProgressBar.progress = progress
             }
 
             override fun onFinish() {
-                //Do what you want
-                //i++
-                //mProgressBar.progress = 200
             }
         }
         mCountDownTimer.start()
